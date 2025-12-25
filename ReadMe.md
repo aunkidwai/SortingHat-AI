@@ -82,3 +82,20 @@ Hiring pipelines often fail due to inconsistent resume formats, ambiguous skill 
 - Human-in-the-loop review: recruiter feedback refines scoring weights and templates.
 - Deployment: containerized API, async batch processing, and embedding caching.
 
+
+## Quickstart
+
+The repository now includes a minimal Python package that demonstrates the resume parsing and scoring workflow.
+
+1. Install dependencies (optionally including test tooling):
+   ```bash
+   python -m pip install -e .[tests]
+   ```
+2. Run the lightweight test suite:
+   ```bash
+   pytest
+   ```
+3. Score a resume text file against a job description:
+   ```bash
+   python -m sortinghat.cli path/to/resume.txt path/to/jd.txt --required Python PyTorch NLP --optional Docker AWS
+   ```
