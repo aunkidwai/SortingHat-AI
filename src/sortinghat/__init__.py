@@ -1,18 +1,22 @@
-"""SortingHat AI lightweight resume parsing and matching utilities."""
+"""SortingHat AI — resume parsing, scoring, and LLM-enhanced matching."""
 
+from .llm import LLMResponse, OllamaClient
 from .models import CandidateProfile, ContactInfo, Education, Experience
 from .parser import ResumeParser
-from .pipeline import ResumePipeline, PipelineResult
-from .scoring import JobMatchScorer, MatchBreakdown
+from .pipeline import PipelineResult, ResumePipeline
+from .scoring import JobMatchScorer, MatchBreakdown, canonicalize_skill
 
 __all__ = [
     "CandidateProfile",
     "ContactInfo",
     "Education",
     "Experience",
+    "JobMatchScorer",
+    "LLMResponse",
+    "MatchBreakdown",
+    "OllamaClient",
+    "PipelineResult",
     "ResumeParser",
     "ResumePipeline",
-    "PipelineResult",
-    "JobMatchScorer",
-    "MatchBreakdown",
+    "canonicalize_skill",
 ]
